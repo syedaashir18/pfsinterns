@@ -67,4 +67,3 @@ done_button.place(x=150, y=500, height=50, width=200)
 
 
 win.mainloop()
-
