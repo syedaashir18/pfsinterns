@@ -4,7 +4,6 @@ import socket
 import threading
 import os
 
-# Function to send file
 def send_file():
     file_path = filedialog.askopenfilename()
     if file_path:
@@ -14,7 +13,7 @@ def send_file():
             s.sendfile(file)
         s.close()
 
-# Function to receive file
+
 def receive_file():
     s = socket.socket()
     s.bind((receiver_ip.get(), int(receiver_port.get())))
@@ -29,11 +28,11 @@ def receive_file():
     conn.close()
     s.close()
 
-# Function to start receiving in a new thread
+
 def start_receiving():
     threading.Thread(target=receive_file).start()
 
-# GUI setup
+
 root = tk.Tk()
 root.title("File Sharing App")
 
